@@ -4,9 +4,12 @@ services:
   
   #react service
   react:
-    container_name: client
+    container_name: pokedex
     build:
       context: ./docker/react
+
+    volumes:
+      - ./app:/appclient
 
     ports:
       - '3000:3000'
